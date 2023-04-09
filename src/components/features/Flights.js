@@ -11,20 +11,29 @@ function Flights(props) {
     const [overflow, setOverflow] = React.useState(false)
 
     React.useEffect(() => {
-        if (props.oneWay) document.querySelector('#period').scrollLeft += 230*15
+        if (props.oneWay) document.querySelector('#period').scrollLeft = 230*15
     }, [props.oneWay])
 
     const moveLeft = () => {
-        document.querySelector('#period').scrollLeft -= 450
+        document.querySelector('#period').scrollLeft -= 460
     }
     
     const moveRight = () => {
-        document.querySelector('#period').scrollLeft += 450
+        document.querySelector('#period').scrollLeft += 460
     }
 
     const chooseTicket = (ticket) => {
         setTickets([...tickets,ticket])
         document.querySelector('#period').scrollTo(0, 0)
+    }
+
+    const closeTicket = (id) => {
+        const newTickets = []
+        for (let i=0; i<id; i++) newTickets.push(tickets[i])
+        setTickets(newTickets)
+        setTimeout(() => {
+            if (document.querySelector('#period') && props.oneWay && newTickets.length === 0) document.querySelector('#period').scrollLeft = 230*15
+        }, 100);
     }
 
     const isChosen = (ticket) => {
@@ -71,7 +80,7 @@ function Flights(props) {
         })
         
         return <>
-            {tickets.length > 0 ? <Tickets currency={props.currencySymbol} tickets={tickets} setTickets={setTickets}/> : ''}
+            {tickets.length > 0 ? <Tickets currency={props.currencySymbol} tickets={tickets} closeTicket={closeTicket}/> : ''}
             <div className="flights">
                 <div className="location">{getLocationByCode(tickets.length > 0 ? tickets[tickets.length-1].destination : props.origin).loc.split(',')[0]} to</div>
                 <div className={overflow ? "left" : "empty"} onClick={() => moveLeft()}/>
@@ -95,7 +104,7 @@ function Flights(props) {
         </>
     }
 
-    return <Tickets currency={props.currencySymbol} tickets={tickets} setTickets={setTickets}/>
+    return <Tickets currency={props.currencySymbol} tickets={tickets} closeTicket={closeTicket}/>
 }
 
 export default Flights

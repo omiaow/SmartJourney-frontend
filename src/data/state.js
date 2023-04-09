@@ -85,7 +85,7 @@ export const collectFlights = async (params, setFlights, setError, setProgress, 
                 const response = await result.json()
           
                 if (!result.ok) {
-                    setError('Error occured!')
+                    setError(true)
                     return
                 }
                 

@@ -17,13 +17,6 @@ function Tickets(props) {
         document.querySelector('#tickets').scrollLeft += 450;
     }
 
-    const remove = (id) => {
-        const newTickets = []
-        for (let i=0; i<id; i++) newTickets.push(props.tickets[i])
-        props.setTickets(newTickets)
-        if (document.querySelector('#period')) document.querySelector('#period').scrollTo(0, 0)
-    }
-
     const getTotal = (tickets) => {
         let total = 0
         tickets.forEach(ticket => {
@@ -37,7 +30,7 @@ function Tickets(props) {
         let date = new Date(ticket.date.split('T')[0])
         jsxTickets.push(
             <div className="ticket" key={i}>
-                {props.setTickets ? <div className="close" onClick={() => remove(i)}>+</div> : ''}
+                {props.closeTicket ? <div className="close" onClick={() => props.closeTicket(i)}>+</div> : ''}
                 <div className="border">
                     <div className="description">from:</div>
                     <div className="data-words">{getLocationByCode(ticket.origin).loc} ({ticket.originAirport})</div>

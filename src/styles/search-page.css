@@ -16,14 +16,14 @@
     }
 }
 
-.loading {
+.search-page .loading {
     width: 150px;
     height: 150px;
     margin: auto;
     margin-top: calc(100vh / 2 - 100px);
 }
 
-.loading .progress {
+.search-page .loading .progress {
     text-align: center;
     color: #212F3C;
     margin-top: -100px;
@@ -31,7 +31,7 @@
     margin-bottom: 50px;
 }
 
-.loading .directions {
+.search-page .loading .directions {
     width: 200px;
     margin-left: -25px;
     text-align: center;
@@ -45,7 +45,7 @@
     font-weight: bold;
 }
 
-.loading .loader {
+.search-page .loading .loader {
     border: 15px solid #212F3C;
     border-radius: 50%;
     border-top: 15px solid #EEF1F7;
@@ -64,4 +64,15 @@
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+.search-page .error {
+    width: 100%;
+    height: 100vh;
+    line-height: 100vh;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 0.55px;
+    font-family: Inter;
+    color: #212F3C;
 }

@@ -31,11 +31,12 @@ function SearchPage() {
     return <main>
         <div className='wrapper'>
             <div className='search-page'>
-                { progress.percentage >= 100 ? <Flights flights={flights} origin={origin} currencySymbol={getCurrencyByCode(currency).title} oneWay={oneWay}/> : <div className="loading">
+                { !error ?
+                (progress.percentage >= 100 ? <Flights flights={flights} origin={origin} currencySymbol={getCurrencyByCode(currency).title} oneWay={oneWay}/> : <div className="loading">
                     <div className="loader"/>
                     <div className="progress">{progress.percentage}%</div>
                     <p className="directions">{progress.location}</p>
-                </div> }
+                </div>) : <div className="error">Sorry, something went wrong. Please, try to search other destinations.</div> }
             </div>
         </div>
     </main>
