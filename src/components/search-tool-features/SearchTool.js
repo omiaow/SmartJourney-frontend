@@ -31,15 +31,23 @@ function SearchTool() {
                 destinationsString += `${item.air}+`
             })
             destinationsString = destinationsString.slice(0, -1)
+
+            let startDateString = new Date(startDate)
+            startDateString.setDate(startDateString.getDate() + 1)
+            startDateString = startDateString.toISOString().split('T')[0]
+
             if (checkDestination && roundtrip && endDate) {
+                let endDateString = new Date(endDate)
+                endDateString.setDate(endDateString.getDate() + 1)
+                endDateString = endDateString.toISOString().split('T')[0]
                 history({
                     pathname: "/search",
-                    search: `?origin=${origin.air}&destinations=${destinationsString}&startDate=${startDate.toISOString().split('T')[0]}&endDate=${endDate.toISOString().split('T')[0]}&currency=${currency}`
+                    search: `?origin=${origin.air}&destinations=${destinationsString}&startDate=${startDateString}&endDate=${endDateString}&currency=${currency}`
                 })
             } else if (checkDestination && !roundtrip) {
                 history({
                     pathname: "/search",
-                    search: `?origin=${origin.air}&destinations=${destinationsString}&startDate=${startDate.toISOString().split('T')[0]}&currency=${currency}`
+                    search: `?origin=${origin.air}&destinations=${destinationsString}&startDate=${startDateString}&currency=${currency}`
                 })
             }
         }

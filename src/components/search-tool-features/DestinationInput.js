@@ -6,6 +6,7 @@ function DestinationInput(props) {
     const [value, setValue] = React.useState("")
     const [active, setActive] = React.useState(-1)
     const [options, setOptions] = React.useState([])
+    const ref = React.useRef(null)
     const autocompleteLength = 7
     const destinationLimit = 5
     
@@ -54,6 +55,7 @@ function DestinationInput(props) {
                 props.setDestinations(destinations)
             }
         }
+        ref.current.focus()
     }
 
     const remove = (id) => {
@@ -63,6 +65,7 @@ function DestinationInput(props) {
         const destinations = [...props.destinations]
         destinations.splice(id, 1)
         props.setDestinations(destinations)
+        ref.current.focus()
     }
 
     const next = () => {
@@ -92,7 +95,8 @@ function DestinationInput(props) {
             <input className='destination-input'
                    type='text'
                    autoComplete='off'
-                   placeholder='cities or countries'
+                   ref={ref}
+                   placeholder='up to five cities'
                    onChange={(e) => findOptions(e.target.value)}
                    value={value}
                    onKeyDown={(e) => {
