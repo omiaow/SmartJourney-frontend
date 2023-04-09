@@ -1,0 +1,197 @@
+.flights {
+    float: left;
+    width: 100%;
+    min-height: 250px;
+    margin-top: 30px;
+}
+
+.flights .location {
+    color: #212F3C;
+    min-width: 90%;
+    float: left;
+    margin: 0 5% 5px 5%;
+    font-size: 1.5em;
+    letter-spacing: 0.7px;
+}
+
+.flights .left, 
+.flights .right, 
+.flights .empty {
+    width: 38px;
+    margin: 35px 10px 0 10px;
+    height: 70px;
+    float: left;
+}
+
+.flights .left {
+    background: url("images/dark-left-icon.png");
+}
+
+.flights .right {
+    float: right;
+    background: url("images/dark-right-icon.png");
+}
+
+.flights .left,
+.flights .right {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.flights .period {
+    width: calc(100% - 120px);
+    min-height: 100px;
+    display: flex;
+    float: left;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.flights .period::-webkit-scrollbar {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .flights .period {
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    .flights .left,
+    .flights .right, 
+    .flights .empty {
+        display: none;
+    }
+}
+
+.flights .period .days {
+    width: 200px;
+    min-height: 100px;
+    float: left;
+    margin: 10px 10px 10px 10px;
+    flex: 0 0 auto;
+    background-color: #ffffff;
+    border-radius: 7px;
+    padding: 5px;
+    padding-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.flights .period .days .top {
+    float: left;
+    width: 100%;
+    height: 80px;
+}
+
+.flights .period .days .top .day {
+	float: left;
+	width: 30%;
+	color: #212F3C;
+    font-size: 55px;
+	font-weight: bold;
+	text-align: center;
+	margin: 5px 0 0 5%;
+}
+
+.flights .period .days .top .month-weeks {
+	float: left;
+	width: 65%;
+	height: 100%;
+}
+
+.flights .period .days .top .month-weeks .weekend, .flights .period .days .top .month-weeks .weekday, .flights .period .days .top .month-weeks .month {
+    float: left;
+    width: 80%;
+    color: #922B21;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0 0 15px;
+    letter-spacing: 0.3px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.flights .period .days .top .month-weeks .weekday {
+	color: #212F3C;
+}
+
+.flights .period .days .top .month-weeks .month {
+	color: #212F3C;
+	margin-top: 13px;
+}
+
+.flights .period .days .directs, .flights .period .days .transits {
+	float: left;
+	width: 96%;
+	height: 33px;
+	margin: 0 1.5% 0 1.5%;
+	cursor: pointer;
+	vertical-align: middle;
+	line-height: 33px;
+	border-bottom: 1.5px solid #16A085;
+	color: #212F3C;
+}
+
+.flights .period .days .transits {
+    border-bottom: 1.5px solid #E74C3C;
+}
+
+.flights .period .days .directs:hover {
+	background-color: #16A085;
+	color: #ffffff;
+}
+
+.flights .period .days .transits:hover {
+	background-color: #E74C3C;
+	color: #ffffff;
+}
+
+.flights .period .days .directs .description, .flights .period .days .transits .description {
+    float: left;
+    font-size: 15px;
+    margin-left: 5%;
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.flights .color-description {
+	float: left;
+	width: 90%;
+    margin: 5px 5% 30px 5%;
+	min-height: 35px;
+    overflow: auto;
+}
+
+.flights .color-description .transit, .flights .color-description .direct {
+	float: left;
+	width: 16px;
+	height: 16px;
+    border-radius: 8px;
+	margin-top: 10px;
+	background-color: #E74C3C;
+}
+
+.flights .color-description .direct {
+	background-color: #16A085;
+}
+
+.flights .color-description span {
+	color: #212F3C;
+	float: left;
+	margin: 8px 40px 0 10px;
+	font-size: 15px;
+	letter-spacing: 0.3px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-variant: small-caps;
+}
