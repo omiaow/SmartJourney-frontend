@@ -25,7 +25,7 @@ function SearchPage() {
             setProgress({ percentage: 0, location: ''})
             if (!params.endDate) setOneWay(true)
             collectFlights(params, setFlights, setError, setProgress, window.location.href)
-            window.scrollTo(0, window.innerHeight)
+            setTimeout(() => window.scrollTo(0, window.innerHeight), 200)
         }
     }, [location, query, setQuery])
     
