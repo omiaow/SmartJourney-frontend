@@ -1,6 +1,6 @@
 {
-  "homepage": "https://omiaow.github.io/smart-journey-private",
-  "name": "smart-journey-private",
+  "homepage": "https://omiaow.github.io/SmartJourney-frontend",
+  "name": "SmartJourney-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
