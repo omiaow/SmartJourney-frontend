@@ -38,7 +38,7 @@
     color: #212F3C;
     font-size: 20px;
     letter-spacing: 0.55px;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -73,6 +73,6 @@
     text-align: center;
     font-size: 25px;
     letter-spacing: 0.55px;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     color: #212F3C;
 }
