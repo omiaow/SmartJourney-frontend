@@ -92,7 +92,7 @@
     text-align: center;
     font-size: 18px;
     letter-spacing: 0.55px;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
 }
 
 .search-tool .dates .name {
@@ -111,7 +111,7 @@
     color: #ffffff;
     font-size: 16px;
     letter-spacing: 0.55px;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
 }
 
 .search-tool .destinations p {
@@ -261,7 +261,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     margin-left: 8px;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     letter-spacing: 0.55px;
     padding-left: 3px;
 }
@@ -302,7 +302,7 @@
     color: #212F3C;
     font-size: 1.3em;
     padding: 9px 0 9px 5%;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     letter-spacing: 0.55px;
     border-bottom: 1px solid #C8C8C8;
     cursor: pointer;
