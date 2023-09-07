@@ -89,7 +89,6 @@
     flex: 0 0 auto;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    font-family: 'Inter', sans-serif;
 }
 
 .tickets .list .ticket .close {
@@ -115,6 +114,7 @@
     padding: 10px 0 0 0;
     margin: 10px 9px 10px 9px;
     float: left;
+    font-family: 'Inter', sans-serif;
 }
 
 .tickets .list .ticket .description {

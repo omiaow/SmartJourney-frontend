@@ -171,6 +171,7 @@
 	min-height: 35px;
     overflow: auto;
     font-family: 'Inter', sans-serif;
+    font-weight: bold;
 }
 
 .flights .color-description .transit, .flights .color-description .direct {
