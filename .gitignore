@@ -1,40 +1,23 @@
-<h1 align="center">
-  SmartJourney
-</h1>
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-<p align="center">
-  <a href="https://github.com/omiaow/smart-journey/blob/main/LICENSE" target="blank">
-    <img src="https://img.shields.io/github/license/omiaow/smart-journey?style=flat-square" alt="smart-journey" />
-  </a>
-</p>
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-#### Tired of searching cheap flight tickets to your trip?
+# testing
+/coverage
 
-## 🚀 Demo
+# production
+/build
 
-Try the application [SmartJourney](https://smartjourney.netlify.app/).
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-## Features
-
-- **Multi-city searching** - You can search flights for multiple cities specifying just your vacation dates.
-
-- **Create trip** - Select destinations and dates, and create your own trip by looking all possible options.
-
-- **Find trip** - Find trip by fast searching function, which shows the cheapest possible trip.
-
-## Future plan
-
-- Add **Google Maps** to make easy location searching.
-
-- Add **Hotel Prices** to see whole trip cost.
-
-- Connect own database to authenticate users.
-
-- Users will get notifications about cheap options for their vacation dates.
-
-- Users will store their plans after they create trip.
-
-<hr>
-<p align="center">
-  Developed with ❤️ in Budapest
-</p>
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
