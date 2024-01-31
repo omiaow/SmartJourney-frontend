@@ -12,7 +12,7 @@
 
 ## 🚀 Demo
 
-Try the application [SmartJourney](https://smartjourney.netlify.app/).
+Try the application [SmartJourney](https://smart-journey.netlify.app/).
 
 ## Features
 
