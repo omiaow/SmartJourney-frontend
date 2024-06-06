@@ -80,7 +80,7 @@ export const collectFlights = async (params, setFlights, setError, setProgress, 
     for (let i=0; i<locations.length; i++) {
         for (let j=0; j<locations.length; j++) {
             if (i !== j) {
-                const url = `https://weak-cyan-tuna-boot.cyclic.app/one-way/${locations[i]}/${locations[j]}/${startDate}/${endDate}/${params.currency}`
+                const url = `https://smartjourney-backend.onrender.com/one-way/${locations[i]}/${locations[j]}/${startDate}/${endDate}/${params.currency}`
                 const result = await fetch(url)
                 const response = await result.json()
           
