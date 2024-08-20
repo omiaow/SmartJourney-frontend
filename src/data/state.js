@@ -80,7 +80,7 @@ export const collectFlights = async (params, setFlights, setError, setProgress, 
     for (let i=0; i<locations.length; i++) {
         for (let j=0; j<locations.length; j++) {
             if (i !== j) {
-                const url = `http://34.34.140.55:5001/one-way/${locations[i]}/${locations[j]}/${startDate}/${endDate}/${params.currency}`
+                const url = `https://smartjourney-backend.onrender.com/one-way/${locations[i]}/${locations[j]}/${startDate}/${endDate}/${params.currency}`
                 const result = await fetch(url)
                 const response = await result.json()
           
